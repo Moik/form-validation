@@ -1,0 +1,284 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat|Lato);
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	padding-bottom: 20px;
+	background: #27292b;
+	font: 13px 'Lato', sans-serif;
+}
+
+.content {
+	max-width: 485px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+
+h1 {
+	margin-bottom: 32px;
+	padding: 30px 0 20px;
+	font: 2.23em 'Montserrat', sans-serif;
+	color: #fff;
+	text-transform: uppercase;
+	border-bottom: 1px solid #47494b;
+}
+
+.input-wrap {
+	position: relative;
+	float: left;
+	width: 225px;
+	margin: 0 15px 40px 0;
+}
+
+.input-wrap:nth-child(even) {
+	margin-right: 0;
+}
+
+.textarea-wrap {
+	clear: both;
+}
+
+.input-wrap:nth-child(5) input{
+	padding-right: 35px;
+}
+
+i {
+	position: absolute;
+	display: block;
+	width: 13px;
+	height: 13px;
+	top: 35px;
+	right: 14px;
+	background: url("../img/sprite.png") 
+				no-repeat;
+}
+
+input,
+textarea {
+	display: block;
+	width: 100%;
+	margin: 4px 0 0 0;
+	padding: 13px;
+	background: transparent;
+	color: #47494b;
+	font-family: 'Lato', sans-serif;
+	border: 1px solid #47494b;
+	border-radius: 3px;
+}
+
+textarea {
+	max-width: 100%;
+	height: 155px;
+	margin-bottom: 28px;
+}
+
+label,
+fieldset {
+	color: #47494b;
+}
+
+fieldset {
+	border: none;
+}
+
+fieldset label {
+	display: block;
+}
+
+#phone_country,
+#phone_code {
+	float: left;
+	width: 28%;
+	margin-right: 2%;
+}
+
+#phone_number {
+	width: 40%;
+	margin-right: 0;
+}
+
+input[type="checkbox"],
+input[type="checkbox"] + label {
+	display: block;
+	float: left;
+}
+
+input[type="checkbox"] {	
+	width: auto;
+	margin: 2px 5px 0 0;
+}
+
+input[type="checkbox"] + label {
+	width: 92%;
+}
+
+label a {
+	color: #fff;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+label a:hover {
+	text-decoration: underline;
+}
+
+button {
+	display: inline-block;
+	width: 127px;
+	height: 39px;
+	margin: 28px 18px 0 0;
+	background: transparent;
+	color: #47494b;
+	border: 1px solid #47494b;
+	border-radius: 3px;
+	cursor: pointer;
+	clear: right;
+}
+
+button:hover {
+	background: #5d9f81;
+	color: #fff;
+	border-color: #5d9f81;
+}
+
+button[type="reset"]:hover {
+	background: #da5f5b;
+	border-color: #da5f5b;
+}
+
+button[type="submit"]:active {
+	background: #6eaf92;
+	border-color: #6eaf92;
+}
+
+button[type="reset"]:active {
+	background: #eb6f6c;
+	border-color: #eb6f6c;
+}
+
+button:focus {
+	outline: none;
+}
+
+input:focus,
+textarea:focus {
+	color: #fff;
+	border-color: #fff;
+	outline: none;
+}
+
+.valid {
+	color: #6abd97;
+	border-color: #6abd97;
+}
+
+.invalid {
+	color: #fff;
+	border-color: #da5f5b;
+}
+
+.valid label {
+	color: #6abd97;
+}
+
+.invalid label {
+	color: #da5f5b;
+}
+
+.focus label {
+	color: #fff;
+}
+
+.valid i {
+	background-position: 0 -26px;
+}
+
+.invalid i {
+	background-position: 0 -39px;
+}
+
+.focus i {
+	background-position: 0 -13px;
+}
+
+.error-message {
+	position: absolute;
+	display: none;
+	top: 110%;
+	width: 80%;
+	margin-left: 20%;
+	padding: 5px 0;
+	color: #fff;
+	text-align: center;
+	border: 1px solid #b03d30;
+	border-radius: 5px;
+}
+
+.error-message::before,
+.error-message::after {
+	content: '';
+	position: absolute;
+	z-index: 100;
+	right: 20px;
+	bottom: 100%;
+	border: 12px solid transparent;
+	border-bottom: 12px solid #b03d30;
+}
+
+.error-message::after {
+	border-bottom: 12px solid #27292b;
+	bottom: 99%;
+}
+
+fieldset .error-message {
+	margin: 0;
+}
+
+fieldset .error-message:nth-child(3) {
+	left: 0;
+	width: 28%;
+}
+
+fieldset .error-message:nth-child(5) {
+	left: 30%;
+	width: 28%;
+}
+
+fieldset .error-message:last-child {
+	right: 0;
+	width: 40%;
+}
+
+
+@media screen and (max-width: 600px) {
+	h1 {
+		text-align: center;
+	}
+	.input-wrap {
+  		width: 100%;
+	}
+	button {
+  		width: 100%;
+  		margin-top: 20px;
+	}
+
+	button[type="reset"] {
+		margin-top: 15px;
+	}
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait) {
+	h1 {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) and (orientation: landscape) {
+	h1 {
+		color: #6abd97;
+	}
+}
